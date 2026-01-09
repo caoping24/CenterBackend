@@ -14,9 +14,6 @@ namespace CenterReport.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
-
-            //// todo：目前只用对单个表实体进行软删除过滤
-            //modelBuilder.Entity<Report>().HasQueryFilter(p => !p.IsDelete);
         }
     }
 }

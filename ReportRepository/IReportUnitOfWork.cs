@@ -1,6 +1,6 @@
 ﻿namespace CenterReport.Repository
 {
-    public interface IUnitOfWork1
+    public interface IReportUnitOfWork
     {
         Task<int> SaveChangesAsync();
     }

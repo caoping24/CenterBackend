@@ -1,8 +1,9 @@
-using CenterReport.Repository;
-using CenterUser.Repository;
+using CenterBackend.IReportServices;
 using CenterBackend.IUserServices;
 using CenterBackend.Middlewares;
 using CenterBackend.Services;
+using CenterReport.Repository;
+using CenterUser.Repository;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.OpenApi.Models;
 
@@ -19,8 +20,9 @@ namespace CenterBackend
             // 读取配置
             var configuration = builder.Configuration;
 
-            //泛型仓储注入
+            //1:泛型仓储注入
             builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            builder.Services.AddScoped(typeof(IReportRepository<>), typeof(ReportRepository<>));
 
             // 添加 DbContext 到服务容器
             string defaultConnection = configuration.GetConnectionString("DefaultConnection");
@@ -28,10 +30,13 @@ namespace CenterBackend
                 options.UseSqlServer(defaultConnection));
             builder.Services.AddDbContext<CenterReportDbContext>(options =>
                 options.UseSqlServer(defaultConnection));
-
+            //2:手动注册Service
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
-            // todo：暂时支持手动注册Service
+            builder.Services.AddScoped<IReportUnitOfWork, ReportUnitOfWork>();
+
             builder.Services.AddScoped<IUserService, UserService>();
+            builder.Services.AddScoped<IReportService, ReportService>();
+
             builder.Services.AddControllers();
 
             // 添加会话服务
