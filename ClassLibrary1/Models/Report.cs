@@ -1,6 +1,6 @@
 ﻿namespace CenterReport.Repository.Models
 {
-    public class Class1
+    public class Report
     {
 
     }
