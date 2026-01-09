@@ -2,7 +2,7 @@
 
 基于 .NET8 Web API+ Vue3 的简单用户管理，前后端分离，实现了用户注册、登录、查询管理等功能。
 
-前端代码地址：https://gitee.com/pengyong2333/user-center-frontend-vue
+
 
 # 项目概述
 
@@ -22,12 +22,5 @@
 - 使用Ant Design 开发页面
 - 使用Axios做为网络请求库
 
-# 主要功能主界面
-![输入图片说明](image.png)
-系统用户分为普通用户和管理员，注册默认为普通用户，管理员拥有用户管理功能权限。
-
-# 线上地址
-后端AIP：http://118.31.13.93/swagger/index.html
-前端地址：http://118.31.13.93:8081/
 
 
