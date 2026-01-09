@@ -21,7 +21,7 @@ namespace CenterBackend.Controllers
         }
 
         /// <summary>
-        /// зЂВс
+        /// 
         /// </summary>
         /// <param name="AddReportDto_1"></param>
         /// <returns></returns>
