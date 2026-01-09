@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace Center.Repository.Models
+namespace CenterUser.Repository.Models
 {
     [Table("user")] //指定表名称
     public class User : ISoftDelete

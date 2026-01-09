@@ -1,4 +1,4 @@
-﻿namespace Center.Repository
+﻿namespace CenterUser.Repository
 {
     public interface IRepository<T> where T : class, ISoftDelete
     {

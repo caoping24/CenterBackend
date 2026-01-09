@@ -1,4 +1,5 @@
-using Center.Repository;
+using CenterReport.Repository;
+using CenterUser.Repository;
 using CenterBackend.IUserServices;
 using CenterBackend.Middlewares;
 using CenterBackend.Services;
@@ -24,8 +25,9 @@ namespace CenterBackend
             // 添加 DbContext 到服务容器
             string defaultConnection = configuration.GetConnectionString("DefaultConnection");
             builder.Services.AddDbContext<ApplicationDbContext>(options =>
-                options.UseMySql(defaultConnection, ServerVersion.AutoDetect(defaultConnection)));
-
+                options.UseSqlServer(defaultConnection));
+            builder.Services.AddDbContext<CenterReportDbContext>(options =>
+                options.UseSqlServer(defaultConnection));
 
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
             // todo：暂时支持手动注册Service

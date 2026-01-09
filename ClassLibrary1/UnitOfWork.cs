@@ -1,9 +1,9 @@
-﻿namespace CenterUser.Repository
+﻿namespace CenterReport.Repository
 {
     public class UnitOfWork : IUnitOfWork
     {
-        private readonly ApplicationDbContext _context;
-        public UnitOfWork(ApplicationDbContext context)
+        private readonly CenterReportDbContext _context;
+        public UnitOfWork(CenterReportDbContext context)
         {
             _context = context;
         }

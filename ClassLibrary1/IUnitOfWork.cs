@@ -1,4 +1,4 @@
-﻿namespace CenterUser.Repository
+﻿namespace CenterReport.Repository
 {
     public interface IUnitOfWork
     {

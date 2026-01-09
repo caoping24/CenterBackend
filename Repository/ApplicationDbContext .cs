@@ -1,7 +1,7 @@
-﻿using Center.Repository.Models;
+﻿using CenterUser.Repository.Models;
 using Microsoft.EntityFrameworkCore;
 
-namespace Center.Repository
+namespace CenterUser.Repository
 {
     public class ApplicationDbContext : DbContext
     {

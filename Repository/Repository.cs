@@ -1,7 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 
 
-namespace Center.Repository
+namespace CenterUser.Repository
 {
     public class Repository<T> : IRepository<T> where T : class, ISoftDelete
     {
